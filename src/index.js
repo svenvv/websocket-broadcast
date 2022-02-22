@@ -2,7 +2,7 @@
 const https = require('https')
 const fs = require('fs')
 const WebSocket = require('ws')
-const uuid = require('uuid/v1')
+const { v1: uuidv1 } = require('uuid')
 const chalk = require('chalk')
 const clear = require('clear')
 const cursor = require('cli-cursor')
@@ -47,7 +47,7 @@ wss.on('connection', (ws, req) => {
   channels[channelId].push(ws)
 
   if (identify) {
-    const id = uuid()
+    const id = uuidv1()
     if (verbose) log(`NEW client: ID: ${chalk.white(id)} @${chalk.blue(host)}`)
 
     // Send UUID to client.
