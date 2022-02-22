@@ -6,7 +6,6 @@ const uuid = require('uuid/v1')
 const chalk = require('chalk')
 const clear = require('clear')
 const cursor = require('cli-cursor')
-const printii = require('printii')(__dirname)
 const args = require('minimist')(process.argv.slice(2))
 const port = process.env.PORT || args.port || args.p || 3333
 const verbose = !args.nolog
@@ -16,7 +15,6 @@ const { key } = args
 let wss
 
 clear()
-printii()
 cursor.hide()
 
 // Create websocket server.

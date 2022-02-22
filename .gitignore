@@ -1,2 +1,5 @@
 node_modules
 npm-debug.log
+websocket-broadcast-linux
+websocket-broadcast-macos
+websocket-broadcast-win.exe
